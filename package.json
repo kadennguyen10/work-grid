@@ -2,12 +2,15 @@
   "name": "work-grid",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kadennguyen10.github.io/work-grid",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "deploy": "npm run build && gh-pages -d dist",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "moment": "^2.29.4",
     "primeflex": "^3.2.1",
     "primeicons": "^6.0.1",

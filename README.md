@@ -14,6 +14,10 @@ npm run serve
 ```
 npm run build
 ```
+### Important - Deploy to GitHub
+```
+npm run deploy
+```
 
 ### Lints and fixes files
 ```

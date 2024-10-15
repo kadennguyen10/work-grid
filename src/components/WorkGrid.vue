@@ -32,6 +32,17 @@
           class="p-inputtext-lg"
           placeholder="Grid 3"
           v-model="input3"
+          @keyup.enter="unlock"
+        />
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col m-2">
+        <InputText
+          type="text"
+          class="p-inputtext-lg"
+          placeholder="Result"
+          v-model="input4"
         />
       </div>
     </div>
@@ -74,6 +85,17 @@
           class="p-inputtext-lg"
           placeholder="Grid 3"
           v-model="inputE3"
+          @keydown.enter="unlockE"
+        />
+      </div>
+    </div>
+    <div class="grid">
+      <div class="col m-2">
+        <InputText
+          type="text"
+          class="p-inputtext-lg"
+          placeholder="Result E"
+          v-model="inputE4"
         />
       </div>
     </div>
@@ -94,6 +116,8 @@ const input3 = ref("");
 const inputE1 = ref("");
 const inputE2 = ref("");
 const inputE3 = ref("");
+const input4 = ref("");
+const inputE4 = ref("");
 import { gridTable, gridTableE } from "@/assets/gridTable";
 
 const getCharIndex = (char: string) => {
@@ -111,6 +135,10 @@ const unlock = () => {
   input1.value = gridTable[secondChar1][firstChar1].toString();
   input2.value = gridTable[secondChar2][firstChar2].toString();
   input3.value = gridTable[secondChar3][firstChar3].toString();
+  input4.value =
+    gridTable[secondChar1][firstChar1].toString() +
+    gridTable[secondChar2][firstChar2].toString() +
+    gridTable[secondChar3][firstChar3].toString();
 };
 
 const unlockE = () => {
@@ -124,6 +152,10 @@ const unlockE = () => {
   inputE1.value = gridTableE[secondChar1][firstChar1].toString();
   inputE2.value = gridTableE[secondChar2][firstChar2].toString();
   inputE3.value = gridTableE[secondChar3][firstChar3].toString();
+  inputE4.value =
+    gridTableE[secondChar1][firstChar1].toString() +
+    gridTableE[secondChar2][firstChar2].toString() +
+    gridTableE[secondChar3][firstChar3].toString();
 };
 </script>
 
